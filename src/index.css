@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 45 30% 96%;
+    --foreground: 25 25% 15%;
+
+    --card: 45 40% 98%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 45 40% 98%;
+    --popover-foreground: 25 25% 15%;
+
+    --primary: 345 50% 35%;
+    --primary-foreground: 45 30% 96%;
+
+    --secondary: 150 25% 30%;
+    --secondary-foreground: 45 30% 96%;
+
+    --muted: 45 20% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 40 60% 50%;
+    --accent-foreground: 25 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 345 50% 35%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 45 30% 94%;
+    --sidebar-foreground: 25 25% 15%;
+    --sidebar-primary: 345 50% 35%;
+    --sidebar-primary-foreground: 45 30% 96%;
+    --sidebar-accent: 40 60% 50%;
+    --sidebar-accent-foreground: 25 25% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 345 50% 35%;
+
+    /* Custom tokens */
+    --gold: 40 60% 50%;
+    --gold-light: 40 50% 70%;
+    --burgundy: 345 50% 35%;
+    --burgundy-dark: 345 55% 25%;
+    --forest: 150 25% 30%;
+    --cream: 45 30% 96%;
+    --cream-dark: 45 25% 88%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(40 60% 50%), hsl(35 55% 45%));
+    --gradient-burgundy: linear-gradient(135deg, hsl(345 50% 35%), hsl(345 55% 25%));
+    --gradient-hero: linear-gradient(180deg, hsl(45 30% 96%) 0%, hsl(45 25% 92%) 100%);
+    
+    /* Shadows */
+    --shadow-book: 4px 4px 20px -5px hsl(25 25% 15% / 0.15);
+    --shadow-card: 0 4px 20px -5px hsl(25 25% 15% / 0.1);
+    --shadow-hover: 0 8px 30px -5px hsl(25 25% 15% / 0.2);
+
+    /* Typography */
+    --font-display: 'Playfair Display', Georgia, serif;
+  }
+
+  .dark {
+    --background: 25 20% 10%;
+    --foreground: 45 30% 92%;
+
+    --card: 25 18% 14%;
+    --card-foreground: 45 30% 92%;
+
+    --popover: 25 18% 14%;
+    --popover-foreground: 45 30% 92%;
+
+    --primary: 40 60% 55%;
+    --primary-foreground: 25 20% 10%;
+
+    --secondary: 150 20% 40%;
+    --secondary-foreground: 45 30% 92%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 345 45% 50%;
+    --accent-foreground: 45 30% 92%;
+
+    --border: 25 15% 25%;
+    --input: 25 15% 25%;
+    --ring: 40 60% 55%;
+
+    --sidebar-background: 25 18% 12%;
+    --sidebar-foreground: 45 30% 92%;
+    --sidebar-primary: 40 60% 55%;
+    --sidebar-primary-foreground: 25 20% 10%;
+    --sidebar-accent: 345 45% 50%;
+    --sidebar-accent-foreground: 45 30% 92%;
+    --sidebar-border: 25 15% 25%;
+    --sidebar-ring: 40 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-burgundy {
+    background: var(--gradient-burgundy);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-book {
+    box-shadow: var(--shadow-book);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .book-spine {
+    background: linear-gradient(90deg, 
+      hsl(25 25% 15% / 0.1) 0%, 
+      transparent 5%, 
+      transparent 95%, 
+      hsl(25 25% 15% / 0.1) 100%
+    );
+  }
+}
