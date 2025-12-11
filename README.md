@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# Книгарня "Світанок"
 
-## Project info
+Сучасний інтернет-магазин книг з інтегрованим книжковим клубом, системою обговорень та спеціальними знижками для членів клубу.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## Особливості
 
-There are several ways of editing your application.
+### Інтернет-магазин
+- **Каталог книг** - зручний перегляд книг за категоріями
+- **Пошук** - швидкий пошук книг за назвою чи автором
+- **Детальні сторінки** - повна інформація про кожну книгу
+- **Кошик покупок** - додавання, видалення та зміна кількості товарів
 
-**Use Lovable**
+### Книжковий клуб
+- **Реєстрація в клубі** - просте приєднання до спільноти
+- **Ексклюзивні знижки** - 15% знижка для членів клубу
+- **Ранній доступ** - першими дізнавайтесь про новинки
+- **Бонусна програма** - накопичуйте бали за покупки
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Система обговорень
+- **Дискусії** - обговорюйте улюблені книги з однодумцями
+- **Коментарі** - діліться враженнями та рекомендаціями
+- **Спільнота читачів** - знаходьте друзів за інтересами
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Швидкий старт
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Вимоги
+- Node.js (версія 18 або новіша)
+- npm або bun
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Встановлення
 
-Follow these steps:
+```bash
+# Клонуйте репозиторій
+git clone https://github.com/fwrwxx/book-app.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Перейдіть до директорії проекту
+cd book-app
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Встановіть залежності
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запустіть сервер розробки
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Відкрийте [http://localhost:5173](http://localhost:5173) у браузері.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🏗️ Структура проекту
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/         # Компоненти React
+│   ├── books/          # Компоненти для книг
+│   ├── club/           # Компоненти книжкового клубу
+│   ├── home/           # Компоненти головної сторінки
+│   ├── layout/         # Шапка, підвал, навігація
+│   └── ui/             # UI компоненти (shadcn/ui)
+├── contexts/           # React контексти
+├── data/               # JSON база даних
+├── hooks/              # Кастомні хуки
+├── lib/                # Утиліти
+└── pages/              # Сторінки додатку
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📄 Сторінки
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Шлях | Опис |
+|------|------|
+| `/` | Головна сторінка з рекомендаціями |
+| `/catalog` | Каталог книг з фільтрами |
+| `/book/:id` | Детальна сторінка книги |
+| `/cart` | Кошик покупок |
+| `/club` | Книжковий клуб та обговорення |
+| `/auth` | Авторизація та реєстрація |
+| `/profile` | Профіль користувача |
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 🔐 Тестовий акаунт
 
-## Can I connect a custom domain to my Lovable project?
+Для тестування функціоналу використовуйте:
 
-Yes, you can!
+- **Email:** `olena@example.com`
+- **Пароль:** `password123`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Цей акаунт вже є членом книжкового клубу.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 🛠️ Технології
+
+- **React 18** - бібліотека для створення інтерфейсів
+- **TypeScript** - типізація JavaScript
+- **Vite** - швидкий збирач модулів
+- **Tailwind CSS** - utility-first CSS фреймворк
+- **shadcn/ui** - колекція компонентів
+- **React Router** - маршрутизація
+- **Lucide React** - іконки
+
+---
+
+## 🎨 Дизайн-система
+
+Проект використовує класичну літературну естетику з теплими тонами:
+
+- **Основний колір** - бордовий (#722F37)
+- **Акцент** - золотий (#D4AF37)
+- **Фон** - кремовий (#FDF8F3)
+- **Шрифти** - Playfair Display (заголовки), Source Sans 3 (текст)
+
